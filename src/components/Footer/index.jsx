@@ -1,15 +1,12 @@
-import { FooterContainer, Register } from "./styles";
+import { FooterContainer } from "./styles";
 
 const Footer = () => {
   return (
-    <>
-      <FooterContainer>
-        <li>Mail</li>
-        <li>Telefono</li>
-        <li>Direccion</li>
-      </FooterContainer>
-      {/*<Register>Diseno</Register>*/}
-    </>
+    <FooterContainer>
+      <li>Mail</li>
+      <li>Telefono</li>
+      <li>Direccion</li>
+    </FooterContainer>
   );
 };
 

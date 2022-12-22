@@ -3,20 +3,17 @@ import styled from "styled-components";
 export const CarrouselContainer = styled.div`
   width: 100%;
   max-width: 100%;
+  display: flex;
+  overflow: hidden;
 `;
 
 export const ButtonsContainer = styled.div`
   height: 16rem;
   display: flex;
   align-items: center;
+  max-width: 100%;
   justify-content: space-between;
   margin-top: -16rem;
-`;
-
-export const Image = styled.img`
-  height: 16rem;
-  max-width: 100%;
-  //border-image-slice: 1rem;
 `;
 
 export const Button = styled.span`

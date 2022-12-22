@@ -1,12 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import Layout from "./components/Layout";
 import Home from "./containers/Home";
 import GlobalStyles from "./GlobalStyles";
 
 const App = () => {
   return (
-    <>
+    <div style={{ height: '100vh' }}>
       <GlobalStyles />
       <Layout>
         <BrowserRouter>
@@ -15,7 +14,7 @@ const App = () => {
           </Routes>
         </BrowserRouter>
       </Layout>
-    </>
+    </div>
   );
 };
 

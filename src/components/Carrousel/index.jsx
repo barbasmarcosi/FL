@@ -1,26 +1,20 @@
-import { useState } from "react";
-import {
-  CarrouselContainer,
-  Image,
-  Button,
-  ButtonsContainer
-} from "./styles";
+import { useEffect, useState } from "react";
+import { CarrouselContainer, Button, ButtonsContainer } from "./styles";
+import ImageViewer from "../ImageViewer";
 
 const Carrousel = () => {
-  const [imgIndex, setImgIndex] = useState(0);
   const srcs = [
     "https://council.science/wp-content/uploads/2017/04/IUPAC-feature-image-1400x600.jpg",
     "https://ramasdelaquimica.com/wp-content/uploads/2022/01/chemistry-1024x566.jpg",
     "https://plustatic.com/1378/conversions/ramas-quimica-large.jpg",
   ];
-
-  const forward = () => {
-    if (imgIndex < srcs.length - 1) {
-      setImgIndex((imgIndex) => imgIndex + 1);
-    } else {
-      setImgIndex(0);
-    }
-  };
+  const [imgIndex, setImgIndex] = useState(0);
+  const forward = () =>
+    setImgIndex(
+      imgIndex < srcs.length - 1
+        ? (imgIndex) => imgIndex + 1
+        : (imgIndex) => imgIndex - srcs.length + 1
+    );
 
   const backward = () => {
     if (imgIndex > 0) {
@@ -30,15 +24,33 @@ const Carrousel = () => {
     }
   };
 
+  useEffect(() => {
+    setTimeout(
+      () =>
+        setImgIndex(
+          imgIndex < srcs.length - 1
+            ? (imgIndex) => imgIndex + 1
+            : (imgIndex) => imgIndex - srcs.length + 1
+        ),
+      5000
+    );
+  }, [imgIndex]);
+
   return (
     <>
       <CarrouselContainer>
-        <Image alt="a" src={srcs[imgIndex]}></Image>
+        {srcs.map((src) => (
+          <ImageViewer
+            src={src}
+            index={srcs.indexOf(src)}
+            imgIndex={imgIndex}
+          />
+        ))}
       </CarrouselContainer>
-      <ButtonsContainer>
-      <Button onClick={() => backward()}>{"<"}</Button>
-      <Button onClick={() => forward()}>{">"}</Button>
-      </ButtonsContainer>
+      {/*<ButtonsContainer>
+        <Button onClick={() => backward()}>{"<"}</Button>
+        <Button onClick={() => forward()}>{">"}</Button>
+        </ButtonsContainer>*/}
     </>
   );
 };

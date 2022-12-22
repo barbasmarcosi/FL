@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.ul`
   margin: 0;
-  width: 100%;
+  width: 100vw;
+  max-width: 100vw;
   height: 4rem;
   background-color: dodgerblue;
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -12,10 +14,3 @@ export const FooterContainer = styled.ul`
   font-size: 0.5rem;
   list-style-type: none;
 `;
-
-export const Register = styled.span`
-  position: absolute;
-  font-size: 0.25rem;
-  right: 0;
-  bottom: 0;
-`
