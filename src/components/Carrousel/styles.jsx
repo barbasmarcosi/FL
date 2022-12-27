@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CarrouselContainer = styled.div`
   width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
   display: flex;
   overflow: hidden;
 `;

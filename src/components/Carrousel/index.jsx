@@ -37,21 +37,16 @@ const Carrousel = () => {
   }, [imgIndex]);
 
   return (
-    <>
-      <CarrouselContainer>
-        {srcs.map((src) => (
-          <ImageViewer
-            src={src}
-            index={srcs.indexOf(src)}
-            imgIndex={imgIndex}
-          />
-        ))}
-      </CarrouselContainer>
-      {/*<ButtonsContainer>
-        <Button onClick={() => backward()}>{"<"}</Button>
-        <Button onClick={() => forward()}>{">"}</Button>
-        </ButtonsContainer>*/}
-    </>
+    <CarrouselContainer>
+      {srcs.map((src) => (
+        <ImageViewer
+          key={srcs.indexOf(src)}
+          src={src}
+          index={srcs.indexOf(src)}
+          imgIndex={imgIndex}
+        />
+      ))}
+    </CarrouselContainer>
   );
 };
 
