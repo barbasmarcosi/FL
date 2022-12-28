@@ -14,7 +14,7 @@ const Header = () => {
       </Logo>
       {/*<BurgerIcon onClick={() => setOpenMenu(!openMenu)} open={openMenu} />*/}
       {/*<Icon>FL</Icon>*/}
-      <Title>Nombre de lo que sea</Title>
+      <Title>Nombre del titulo</Title>
       <Empty />
     </HeaderContainer>
   );

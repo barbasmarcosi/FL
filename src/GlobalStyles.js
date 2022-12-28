@@ -20,5 +20,9 @@ const GlobalStyles = createGlobalStyle`
     * {
     overflow-x: hidden;
     }
+@media (max-width: 528px) {
+    
+}
+    
 `;
 export default GlobalStyles;

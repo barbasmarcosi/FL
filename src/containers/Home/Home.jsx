@@ -4,7 +4,7 @@ import { Logo, About } from "./styles";
 import PlaceIframe from "../../components/PlaceIframe";
 import Contact from "../../components/Contact";
 
-const Home = () => {
+const Home = ({ viewPort }) => {
   return (
     <>
       <Logo>
@@ -22,7 +22,7 @@ const Home = () => {
         explicabo inventore, rerum repellendus nulla obcaecati impedit. Quaerat
         neque, aspernatur eum impedit necessitatibus tenetur sed tempora.
       </About>
-      <Carrousel />
+      <Carrousel viewPort={viewPort} />
       <Contact />
     </>
   );

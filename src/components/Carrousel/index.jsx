@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { CarrouselContainer, Button, ButtonsContainer } from "./styles";
 import ImageViewer from "../ImageViewer";
 
-const Carrousel = () => {
+const Carrousel = ({ viewPort }) => {
   const srcs = [
     "https://council.science/wp-content/uploads/2017/04/IUPAC-feature-image-1400x600.jpg",
     "https://ramasdelaquimica.com/wp-content/uploads/2022/01/chemistry-1024x566.jpg",
-    "https://plustatic.com/1378/conversions/ramas-quimica-large.jpg",
+    "https://c4.wallpaperflare.com/wallpaper/589/614/410/blue-life-dna-medicine-wallpaper-preview.jpg",
+    "https://c4.wallpaperflare.com/wallpaper/920/609/236/dna-science-biology-chemistry-wallpaper-preview.jpg",
   ];
   const [imgIndex, setImgIndex] = useState(0);
   const forward = () =>
@@ -44,6 +45,7 @@ const Carrousel = () => {
           src={src}
           index={srcs.indexOf(src)}
           imgIndex={imgIndex}
+          srcsLength={srcs.length}
         />
       ))}
     </CarrouselContainer>
