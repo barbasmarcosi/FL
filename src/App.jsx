@@ -4,28 +4,21 @@ import Home from "./containers/Home/Home";
 import About from "./containers/About";
 import GlobalStyles from "./GlobalStyles";
 import { useEffect, useState } from "react";
+import { MainProvider } from "./components/GlobalContext";
 
 const App = () => {
-/*  const [viewPort, setViewPort] = useState(
-    window.matchMedia("(min-width: 528px)").matches
-  );
-  useEffect(() => {
-    const handler = (e) => setViewPort(e.matches);
-    window.matchMedia("(min-width: 528px)").addEventListener("change", handler);
-  }, []);
-  console.log(viewPort);*/
   return (
-    <>
+    <MainProvider>
       <GlobalStyles />
       <BrowserRouter>
-        <Layout /*viewPort={viewPort}*/>
+        <Layout>
           <Routes>
-            <Route path="/*" element={<Home /*viewPort={viewPort}*/ />} />
+            <Route path="/*" element={<Home />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </Layout>
       </BrowserRouter>
-    </>
+    </MainProvider>
   );
 };
 

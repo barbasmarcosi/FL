@@ -46,6 +46,7 @@ const Carrousel = ({ viewPort }) => {
           index={srcs.indexOf(src)}
           imgIndex={imgIndex}
           srcsLength={srcs.length}
+          viewPort={viewPort}
         />
       ))}
     </CarrouselContainer>

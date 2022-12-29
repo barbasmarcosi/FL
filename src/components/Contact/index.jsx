@@ -1,24 +1,29 @@
+import { MainContext } from "../GlobalContext";
 import { AiOutlinePhone } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { MdOutlinePlace } from "react-icons/md";
-import { BsMap } from "react-icons/bs";
 import {
   IconContainer,
   ContactContainer,
   IconText,
   IframeContainer,
   MapButton,
-  ArrowContainer,
-  Left,
-  Center,
-  Right,
-  IframeSplitter
+  IframeSplitter,
 } from "./styles";
 import PlaceIframe from "../PlaceIframe";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import SlicedArrow from "../SlicedArrow";
 
 const Contact = () => {
-  const [openMap, setOpenMap] = useState(true);
+  const { openMap, setOpenMap, maxHeight, setMaxHeight } =
+    useContext(MainContext);
+  const [viewPort, setViewPort] = useState(
+    window.matchMedia("(min-width: 528px)").matches
+  );
+  useEffect(() => {
+    const handler = (e) => setViewPort(e.matches);
+    window.matchMedia("(min-width: 528px)").addEventListener("change", handler);
+  }, []);
   return (
     <ContactContainer>
       <IframeSplitter>
@@ -37,33 +42,31 @@ const Contact = () => {
         <IconContainer>
           <MapButton onClick={() => setOpenMap(!openMap)} type="button">
             {/*<BsMap style={{ filter: "drop-shadow(1px 1px black)" }} />{" "}*/}
-            <ArrowContainer
+            <SlicedArrow
+              isOpen={openMap}
+              correctionClosed={viewPort ? 0.7 : 0.5}
+              correctionOpen={0.3}
+              scale={viewPort ? 2 : 1}
+              horizontal={viewPort}
               style={{
-                paddingLeft: `${openMap ? "0.3rem" : "0.1rem"}`,
+                filter: "drop-shadow(2px 2px black)",
+                marginTop: `${viewPort ? "1rem" : "0"}`,
               }}
+            />
+            <IconText
+              style={{ marginLeft: `${viewPort ? "1rem" : "0.25rem"}` }}
             >
-              <Left
-                style={{
-                  rotate: `${openMap ? "45deg " : "-45deg "}`,
-                  marginBottom: `${openMap ? "0.75rem " : "0"}`,
-                  marginTop: `${openMap ? "0 " : "0.75rem"}`,
-                }}
-              />
-
-              <Center />
-              <Right
-                style={{
-                  rotate: `${openMap ? "-45deg " : "45deg "}`,
-                  marginBottom: `${openMap ? "0.75rem " : "0"}`,
-                  marginTop: `${openMap ? "0 " : "0.75rem"}`,
-                }}
-              />
-            </ArrowContainer>
-            <IconText>{openMap ? "Ocultar Mapa " : "Ver Mapa "}</IconText>
+              {openMap ? "Ocultar Mapa " : "Ver Mapa "}
+            </IconText>
           </MapButton>
         </IconContainer>
       </IframeSplitter>
-      <IframeContainer>
+      <IframeContainer
+        style={{
+          margin: `${openMap ? (viewPort ? "0.5rem" : "0.125rem") : "0"}`,
+          width: `${openMap ? (viewPort ? "45vw" : "90vw") : "0"}`,
+        }}
+      >
         <PlaceIframe openMap={openMap} />
       </IframeContainer>
     </ContactContainer>

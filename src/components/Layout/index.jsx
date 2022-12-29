@@ -1,3 +1,5 @@
+import { MainContext } from "../GlobalContext";
+import { useContext, useEffect, useRef, useState } from "react";
 import Footer from "../Footer";
 import Header from "../Header";
 import {
@@ -8,8 +10,12 @@ import {
 } from "./styles";
 
 const Layout = ({ children }) => {
+  const { openMap, setOpenMap, maxHeight, setMaxHeight } =
+    useContext(MainContext);
+  const footerRef = useRef();
+  useEffect(() => {}, [openMap]);
   return (
-    <LayoutContainer>
+    <LayoutContainer style={{ height: maxHeight }}>
       <BackGroundContainer>
         <BackGroundImage
           alt="back"
@@ -41,7 +47,7 @@ const Layout = ({ children }) => {
       </BackGroundContainer>
       <Header />
       {children}
-      {/*<Footer />*/}
+      <Footer footerRef={footerRef} />
     </LayoutContainer>
   );
 };
