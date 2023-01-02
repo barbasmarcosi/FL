@@ -14,7 +14,7 @@ const Footer = () => {
       setMaxHeight(el.offsetTop + el.clientHeight);
     } else {
       count === 2
-        ? viewPort ? setMaxHeight(el.offsetTop + el.clientHeight + 145) : setMaxHeight(el.offsetTop + el.clientHeight + 500)
+        ? viewPort ? setMaxHeight(el.offsetTop + el.clientHeight + 151) : setMaxHeight(el.offsetTop + el.clientHeight + 500)
         : setMaxHeight(elementHeight);
     }
     setCount((count) => count + 1);

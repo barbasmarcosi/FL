@@ -22,7 +22,7 @@ export const Title = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 6rem;
+  font-size: 5rem;
   text-shadow: green 3px 3px;
   font-weight: bold;
   @media (max-width: 528px) {
