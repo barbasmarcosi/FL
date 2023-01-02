@@ -4,7 +4,7 @@ export const IconContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin: 1rem;
-  width: 100%;
+  width: 98%;
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
@@ -16,7 +16,9 @@ export const IconContainer = styled.div`
   box-shadow: 1px 1px 1px 0 black;
   background: transparent;
   color: white;
+  border-radius: 0.5rem;
   @media (max-width: 528px) {
+    border-radius: 0.25rem;
     font-size: 1.25rem;
     margin: 0.125rem;
   }
@@ -40,6 +42,7 @@ export const IframeSplitter = styled.div`
     flex-direction: row;
   }
   @media (max-width: 528px) {
+    border-radius: 0.25rem;
     width: 90vw;
     margin: 0rem;
   }
@@ -63,7 +66,9 @@ export const ContactContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-radius: 0.5rem;
   box-shadow: 3px 3px 3px 0 black;
+  border-radius: 0.5rem;
   @media (max-width: 528px) {
     flex-direction: column;
     border-radius: 0.25rem;
@@ -81,11 +86,12 @@ export const IframeContainer = styled.div`
 `;
 
 export const MapButton = styled.button`
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   border: none;
   margin: 0;
   color: white;
@@ -96,7 +102,11 @@ export const MapButton = styled.button`
   padding: 0.25rem;
   font-size: 2.4rem;
   overflow: hidden;
+  :hover {
+    opacity: 50%;
+  }
   @media (max-width: 528px) {
+    border-radius: 0.25rem;
     font-size: 1.2rem;
     text-shadow: black 1px 1px;
   }

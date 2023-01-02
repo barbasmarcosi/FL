@@ -1,6 +1,6 @@
 import { MainContext } from "../GlobalContext";
 import { AiOutlinePhone } from "react-icons/ai";
-import { AiOutlineMail } from "react-icons/ai";
+import { BsInstagram } from "react-icons/bs";
 import { MdOutlinePlace } from "react-icons/md";
 import {
   IconContainer,
@@ -11,37 +11,37 @@ import {
   IframeSplitter,
 } from "./styles";
 import PlaceIframe from "../PlaceIframe";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import SlicedArrow from "../SlicedArrow";
 
 const Contact = () => {
-  const { openMap, setOpenMap, maxHeight, setMaxHeight } =
-    useContext(MainContext);
-  const [viewPort, setViewPort] = useState(
-    window.matchMedia("(min-width: 528px)").matches
-  );
-  useEffect(() => {
-    const handler = (e) => setViewPort(e.matches);
-    window.matchMedia("(min-width: 528px)").addEventListener("change", handler);
-  }, []);
+  const { openMap, setOpenMap, viewPort } = useContext(MainContext);
   return (
     <ContactContainer>
       <IframeSplitter>
         <IconContainer>
           <AiOutlinePhone style={{ filter: "drop-shadow(2px 2px black)" }} />
-          <IconText>2915249223</IconText>
+          <IconText>2392 42-2544</IconText>
         </IconContainer>
         <IconContainer>
-          <AiOutlineMail style={{ filter: "drop-shadow(2px 2px black)" }} />
-          <IconText>barbasmarcosi@gmail.com</IconText>
+          <MapButton
+            onClick={() =>
+              window.open("https://www.instagram.com/farmacia.leiva/?hl=es-la")
+            }
+            type="button"
+          >
+            <BsInstagram style={{ filter: "drop-shadow(2px 2px black)" }} />
+            <IconText style={{ marginLeft: `${viewPort ? "1rem" : "0.5rem"}` }}>
+              @farmacia.leiva
+            </IconText>
+          </MapButton>
         </IconContainer>
         <IconContainer>
           <MdOutlinePlace style={{ filter: "drop-shadow(2px 2px black)" }} />
-          <IconText>Wilde 122</IconText>
+          <IconText>Simini 978</IconText>
         </IconContainer>
         <IconContainer>
           <MapButton onClick={() => setOpenMap(!openMap)} type="button">
-            {/*<BsMap style={{ filter: "drop-shadow(1px 1px black)" }} />{" "}*/}
             <SlicedArrow
               isOpen={openMap}
               correctionClosed={viewPort ? 0.7 : 0.5}

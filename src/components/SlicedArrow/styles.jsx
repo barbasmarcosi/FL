@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ArrowContainer = styled.div`
+  cursor: pointer;
   margin-left: 0.25rem;
   display: block;
   margin: 0;

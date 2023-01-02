@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Menu, Element } from "./style";
 
 const NavBar = ({ openModal }) => {

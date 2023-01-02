@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const Logo = styled.div`
+  color white;
   font-size: 10rem;
+  text-shadow: green 3px 3px;
   @media (max-width: 528px) {
     font-size: 5rem;
+    text-shadow: green 1px 1px;
   }
 `;
 
@@ -26,6 +29,6 @@ export const About = styled.span`
     padding: 0.5rem;
     font-size: 1rem;
     border-radius: 0.25rem;
-    width: 90vw
+    width: 90vw;
   }
 `;

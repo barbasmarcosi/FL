@@ -4,7 +4,7 @@ export const LayoutContainer = styled.div`
   height: max-content;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: top;
   align-items: center;
   width: 100vw;
   overflow-x: hidden;

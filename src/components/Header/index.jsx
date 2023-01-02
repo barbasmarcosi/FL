@@ -1,20 +1,13 @@
-import { useState } from "react";
-import BurgerIcon from "../BurgerIcon";
-import { AiOutlineExperiment } from "react-icons/ai";
-import { HeaderContainer, Icon, Title, Logo, Empty } from "./styles";
-import NavBar from "../NavBar";
+import { MdOutlineLocalPharmacy } from "react-icons/md";
+import { HeaderContainer, Title, Logo, Empty } from "./styles";
 
 const Header = () => {
-  const [openMenu, setOpenMenu] = useState(false);
   return (
     <HeaderContainer>
-      {/*<NavBar openModal={openMenu} />*/}
       <Logo>
-        <AiOutlineExperiment />
+        <MdOutlineLocalPharmacy />
       </Logo>
-      {/*<BurgerIcon onClick={() => setOpenMenu(!openMenu)} open={openMenu} />*/}
-      {/*<Icon>FL</Icon>*/}
-      <Title>Nombre del titulo</Title>
+      <Title>Farmacia Leiva</Title>
       <Empty />
     </HeaderContainer>
   );

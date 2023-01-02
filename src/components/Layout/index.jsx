@@ -10,38 +10,33 @@ import {
 } from "./styles";
 
 const Layout = ({ children }) => {
-  const { openMap, setOpenMap, maxHeight, setMaxHeight } =
-    useContext(MainContext);
+  const { maxHeight } = useContext(MainContext);
   const footerRef = useRef();
-  useEffect(() => {}, [openMap]);
+  useEffect(() => {}, [maxHeight]);
   return (
-    <LayoutContainer style={{ height: maxHeight }}>
-      <BackGroundContainer>
+    <LayoutContainer>
+      <BackGroundContainer style={{ height: maxHeight }}>
         <BackGroundImage
           alt="back"
           src="https://c0.wallpaperflare.com/preview/985/736/853/backgrounds-school-education-science.jpg"
-          //width={'728px'}
           height={"402px"}
         />
         <ImageDivider />
         <BackGroundImage
           alt="back"
           src="https://c4.wallpaperflare.com/wallpaper/22/728/16/technology-physics-and-chemistry-chemistry-hd-wallpaper-preview.jpg"
-          //width={'728px'}
           height={"402px"}
         />
         <ImageDivider />
         <BackGroundImage
           alt="back"
           src="https://c4.wallpaperflare.com/wallpaper/209/848/50/technology-physics-and-chemistry-chemistry-hd-wallpaper-preview.jpg"
-          //width={'728px'}
           height={"402px"}
         />
         <ImageDivider />
         <BackGroundImage
           alt="back"
           src="https://c4.wallpaperflare.com/wallpaper/217/606/469/chemistry-science-wallpaper-preview.jpg"
-          //width={'728px'}
           height={"402px"}
         />
       </BackGroundContainer>
