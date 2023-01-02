@@ -1,7 +1,6 @@
 import { PlaceIframeContainer, Iframe } from "./styles";
 
 const PlaceIframe = ({ openMap }) => {
-  console.log(openMap);
   return (
     <PlaceIframeContainer>
       <Iframe

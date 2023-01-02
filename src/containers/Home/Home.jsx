@@ -22,6 +22,7 @@ const Home = ({ }) => {
         explicabo inventore, rerum repellendus nulla obcaecati impedit. Quaerat
         neque, aspernatur eum impedit necessitatibus tenetur sed tempora.
       </About>
+      <Carrousel />
       <Contact />
     </>
   );

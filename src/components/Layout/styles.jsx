@@ -27,7 +27,7 @@ export const BackGroundContainer = styled.div`
 
 export const BackGroundImage = styled.img`
   object-fit: cover;
-  height: 100%;
+  height: 402px;
   display: flex;
   flex-direction: column;
   justify-content: center;

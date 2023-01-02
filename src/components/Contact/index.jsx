@@ -11,17 +11,31 @@ import {
   IframeSplitter,
 } from "./styles";
 import PlaceIframe from "../PlaceIframe";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import SlicedArrow from "../SlicedArrow";
 
 const Contact = () => {
+  const [coppied, setCoppied] = useState('2392 42-2544')
+  const copyTextToClipboard = (text) => {
+    if ('clipboard' in navigator) {
+      navigator.clipboard.writeText(text);
+    } else {
+      document.execCommand('copy', true, text);
+    }
+    setCoppied('Telefono copiado')
+    setTimeout(() => {
+      setCoppied('2392 42-2544')
+    }, [2000])
+  }
   const { openMap, setOpenMap, viewPort } = useContext(MainContext);
   return (
     <ContactContainer>
       <IframeSplitter>
         <IconContainer>
-          <AiOutlinePhone style={{ filter: "drop-shadow(2px 2px black)" }} />
-          <IconText>2392 42-2544</IconText>
+          <MapButton onClick={() => copyTextToClipboard(coppied)} type="button">
+            <AiOutlinePhone style={{ filter: "drop-shadow(2px 2px black)" }} />
+            <IconText>{coppied}</IconText>
+          </MapButton>
         </IconContainer>
         <IconContainer>
           <MapButton

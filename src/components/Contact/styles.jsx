@@ -103,7 +103,7 @@ export const MapButton = styled.button`
   font-size: 2.4rem;
   overflow: hidden;
   :hover {
-    opacity: 50%;
+    background: dodgerblue;
   }
   @media (max-width: 528px) {
     border-radius: 0.25rem;

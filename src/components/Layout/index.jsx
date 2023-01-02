@@ -24,6 +24,12 @@ const Layout = ({ children }) => {
         <ImageDivider />
         <BackGroundImage
           alt="back"
+          src="https://c4.wallpaperflare.com/wallpaper/217/606/469/chemistry-science-wallpaper-preview.jpg"
+          height={"402px"}
+        />
+        <ImageDivider />
+        <BackGroundImage
+          alt="back"
           src="https://c4.wallpaperflare.com/wallpaper/22/728/16/technology-physics-and-chemistry-chemistry-hd-wallpaper-preview.jpg"
           height={"402px"}
         />
@@ -31,12 +37,6 @@ const Layout = ({ children }) => {
         <BackGroundImage
           alt="back"
           src="https://c4.wallpaperflare.com/wallpaper/209/848/50/technology-physics-and-chemistry-chemistry-hd-wallpaper-preview.jpg"
-          height={"402px"}
-        />
-        <ImageDivider />
-        <BackGroundImage
-          alt="back"
-          src="https://c4.wallpaperflare.com/wallpaper/217/606/469/chemistry-science-wallpaper-preview.jpg"
           height={"402px"}
         />
       </BackGroundContainer>

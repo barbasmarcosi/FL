@@ -5,8 +5,7 @@
   "homepage": "https://barbasmarcosi.github.io/farmaciaLeiva",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: notest specified\" && exit 1",
     "start": "vite",
     "build": "vite build",
