@@ -11,11 +11,10 @@ const Footer = () => {
   useEffect(() => {
     const el = document.getElementsByClassName("Footer")[0];
     setElementHeight(el.offsetTop + el.clientHeight);
-    console.log(count);
     if (count === 0) {
       setMaxHeight(el.offsetTop + el.clientHeight);
     } else {
-      count === 2
+      count === 1
         ? viewPort
           ? setMaxHeight(el.offsetTop + el.clientHeight - 151)
           : setMaxHeight(el.offsetTop + el.clientHeight - 500)
