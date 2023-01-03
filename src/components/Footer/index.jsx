@@ -4,17 +4,21 @@ import { FooterContainer } from "./styles";
 
 const Footer = () => {
   const footerRef = useRef();
-  const { openMap, maxHeight, setMaxHeight, viewPort } = useContext(MainContext);
+  const { openMap, maxHeight, setMaxHeight, viewPort } =
+    useContext(MainContext);
   const [elementHeight, setElementHeight] = useState(maxHeight);
   const [count, setCount] = useState(0);
   useEffect(() => {
     const el = document.getElementsByClassName("Footer")[0];
     setElementHeight(el.offsetTop + el.clientHeight);
+    console.log(count);
     if (count === 0) {
       setMaxHeight(el.offsetTop + el.clientHeight);
     } else {
       count === 2
-        ? viewPort ? setMaxHeight(el.offsetTop + el.clientHeight + 151) : setMaxHeight(el.offsetTop + el.clientHeight + 500)
+        ? viewPort
+          ? setMaxHeight(el.offsetTop + el.clientHeight - 151)
+          : setMaxHeight(el.offsetTop + el.clientHeight - 500)
         : setMaxHeight(elementHeight);
     }
     setCount((count) => count + 1);

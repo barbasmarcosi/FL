@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 const MainContext = createContext();
 
 const MainProvider = (props) => {
-  const [openMap, setOpenMap] = useState(false);
+  const [openMap, setOpenMap] = useState(true);
   const [maxHeight, setMaxHeight] = useState("");
   const [viewPort, setViewPort] = useState(
     window.matchMedia("(min-width: 528px)").matches
