@@ -261,7 +261,7 @@ object-fit: fill;
   @media (max-width: 528px) {
   }
 `;const E1=({imgIndex:e,src:t,index:n})=>{const{viewPort:r}=_.exports.useContext(Vr);return I(C1,{style:{width:`${r?"33vw":e===n?"100vw":"0"}`},alt:"a",src:t})},P1=({viewPort:e})=>{const t=["https://council.science/wp-content/uploads/2017/04/IUPAC-feature-image-1400x600.jpg","https://ramasdelaquimica.com/wp-content/uploads/2022/01/chemistry-1024x566.jpg","https://c4.wallpaperflare.com/wallpaper/589/614/410/blue-life-dna-medicine-wallpaper-preview.jpg","https://c4.wallpaperflare.com/wallpaper/920/609/236/dna-science-biology-chemistry-wallpaper-preview.jpg"],[n,r]=_.exports.useState(0);return _.exports.useEffect(()=>{setTimeout(()=>r(n<t.length-1?o=>o+1:o=>o-t.length+1),5e3)},[n]),I(k1,{children:t.map(o=>I(E1,{src:o,index:t.indexOf(o),imgIndex:n,srcsLength:t.length,viewPort:e},t.indexOf(o)))})};function _1(e){return Qr({tag:"svg",attr:{viewBox:"0 0 1024 1024"},child:[{tag:"path",attr:{d:"M512 472a40 40 0 1 0 80 0 40 40 0 1 0-80 0zm367 352.9L696.3 352V178H768v-68H256v68h71.7v174L145 824.9c-2.8 7.4-4.3 15.2-4.3 23.1 0 35.3 28.7 64 64 64h614.6c7.9 0 15.7-1.5 23.1-4.3 33-12.7 49.4-49.8 36.6-82.8zM395.7 364.7V180h232.6v184.7L719.2 600c-20.7-5.3-42.1-8-63.9-8-61.2 0-119.2 21.5-165.3 60a188.78 188.78 0 0 1-121.3 43.9c-32.7 0-64.1-8.3-91.8-23.7l118.8-307.5zM210.5 844l41.7-107.8c35.7 18.1 75.4 27.8 116.6 27.8 61.2 0 119.2-21.5 165.3-60 33.9-28.2 76.3-43.9 121.3-43.9 35 0 68.4 9.5 97.6 27.1L813.5 844h-603z"}}]})(e)}function z1(e){return Qr({tag:"svg",attr:{viewBox:"0 0 1024 1024"},child:[{tag:"path",attr:{d:"M877.1 238.7L770.6 132.3c-13-13-30.4-20.3-48.8-20.3s-35.8 7.2-48.8 20.3L558.3 246.8c-13 13-20.3 30.5-20.3 48.9 0 18.5 7.2 35.8 20.3 48.9l89.6 89.7a405.46 405.46 0 0 1-86.4 127.3c-36.7 36.9-79.6 66-127.2 86.6l-89.6-89.7c-13-13-30.4-20.3-48.8-20.3a68.2 68.2 0 0 0-48.8 20.3L132.3 673c-13 13-20.3 30.5-20.3 48.9 0 18.5 7.2 35.8 20.3 48.9l106.4 106.4c22.2 22.2 52.8 34.9 84.2 34.9 6.5 0 12.8-.5 19.2-1.6 132.4-21.8 263.8-92.3 369.9-198.3C818 606 888.4 474.6 910.4 342.1c6.3-37.6-6.3-76.3-33.3-103.4zm-37.6 91.5c-19.5 117.9-82.9 235.5-178.4 331s-213 158.9-330.9 178.4c-14.8 2.5-30-2.5-40.8-13.2L184.9 721.9 295.7 611l119.8 120 .9.9 21.6-8a481.29 481.29 0 0 0 285.7-285.8l8-21.6-120.8-120.7 110.8-110.9 104.5 104.5c10.8 10.8 15.8 26 13.3 40.8z"}}]})(e)}const $1=q.div`
-  color white;
+  color: white;
   font-size: 10rem;
   text-shadow: green 3px 3px;
   @media (max-width: 528px) {
@@ -297,14 +297,15 @@ object-fit: fill;
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
-  background: lightgrey;
   border-radius: 0.25rem;
   margin-bottom: 0.25rem;
   border: 1px solid grey;
   padding: 0.25rem 0;
   box-shadow: 1px 1px 1px 0 black;
   background: transparent;
+  background-color: #96969629;
   color: white;
+  backdrop-filter: blur(10px);
   border-radius: 0.5rem;
   @media (max-width: 528px) {
     border-radius: 0.25rem;
@@ -318,7 +319,6 @@ object-fit: fill;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //background: rgba(179, 179, 179, 1);
   background: transparent;
   opacity: 90%;
   width: 45vw;
@@ -336,11 +336,10 @@ object-fit: fill;
 `,mo=q.span`
   margin-left: 0.25rem;
   font-weight: light;
-  text-shadow: black 2px 2px;
   @media (max-width: 528px) {
-    text-shadow: black 1px 1px;
   }
 `,L1=q.div`
+  backdrop-filter: blur(10px);
   margin: 0.5rem;
   padding: 0.5rem;
   padding-top: 0.25rem;
@@ -376,7 +375,6 @@ object-fit: fill;
   color: white;
   height: 100%;
   font-weight: light;
-  text-shadow: black 3px 3px;
   background: transparent;
   padding: 0.25rem;
   font-size: 2.4rem;
@@ -387,7 +385,6 @@ object-fit: fill;
   @media (max-width: 528px) {
     border-radius: 0.25rem;
     font-size: 1.2rem;
-    text-shadow: black 1px 1px;
   }
 `,I1=q.div`
   width: 100%;
@@ -446,7 +443,7 @@ object-fit: fill;
   transform-origin: right;
   @media (max-width: 528px) {
   }
-`,B1=({isOpen:e,scale:t="1",correctionOpen:n="0",correctionClosed:r="0",style:o,horizontal:l})=>I("div",{style:{paddingLeft:`${e?`${r}rem`:`${n}rem`}`,transform:`scale(${t}) rotate(${l?270:0}deg)`,...o},children:be(j1,{children:[I(D1,{style:{rotate:`${e?"45deg ":"-45deg "}`,marginBottom:`${e?"0.75rem ":"0"}`,marginTop:`${e?"0 ":"0.75rem"}`}}),I(F1,{}),I(U1,{style:{rotate:`${e?"-45deg ":"45deg "}`,marginBottom:`${e?"0.75rem ":"0"}`,marginTop:`${e?"0 ":"0.75rem"}`}})]})}),H1=()=>{const[e,t]=_.exports.useState("2392 42-2544"),n=i=>{"clipboard"in navigator?navigator.clipboard.writeText(i):document.execCommand("copy",!0,i),t("Telefono copiado"),setTimeout(()=>{t("2392 42-2544")},[2e3])},{openMap:r,setOpenMap:o,viewPort:l}=_.exports.useContext(Vr);return be(L1,{children:[be(T1,{children:[I(ho,{children:be(wi,{onClick:()=>n(e),type:"button",children:[I(z1,{style:{filter:"drop-shadow(2px 2px black)"}}),I(mo,{children:e})]})}),I(ho,{children:be(wi,{onClick:()=>window.open("https://www.instagram.com/farmacia.leiva/?hl=es-la"),type:"button",children:[I(R1,{style:{filter:"drop-shadow(2px 2px black)"}}),I(mo,{style:{marginLeft:`${l?"1rem":"0.5rem"}`},children:"@farmacia.leiva"})]})}),be(ho,{children:[I(p1,{style:{filter:"drop-shadow(2px 2px black)"}}),I(mo,{children:"Simini 978"})]}),I(ho,{children:be(wi,{onClick:()=>o(!r),type:"button",children:[I(B1,{isOpen:r,correctionClosed:l?.7:.5,correctionOpen:.3,scale:l?2:1,horizontal:l,style:{filter:"drop-shadow(2px 2px black)",marginTop:`${l?"1rem":"0"}`}}),I(mo,{style:{marginLeft:`${l?"1rem":"0.25rem"}`},children:r?"Ocultar Mapa ":"Ver Mapa "})]})})]}),I(O1,{style:{margin:`${r?l?"0.5rem":"0.125rem":"0"}`,width:`${r?l?"45vw":"90vw":"0"}`},children:I(M1,{openMap:r})})]})},V1=({})=>be(hp,{children:[I($1,{children:I(_1,{})}),I(N1,{children:"Acá va un texto descriptivo de quienes somos. Lorem ipsum dolor sit amet consectetur adipisicing elit. In eveniet animi consequuntur cum quis explicabo inventore, rerum repellendus nulla obcaecati impedit. Quaerat neque, aspernatur eum impedit necessitatibus tenetur sed tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. In eveniet animi consequuntur cum quis explicabo inventore, rerum repellendus nulla obcaecati impedit. Quaerat neque, aspernatur eum impedit necessitatibus tenetur sed tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. In eveniet animi consequuntur cum quis explicabo inventore, rerum repellendus nulla obcaecati impedit. Quaerat neque, aspernatur eum impedit necessitatibus tenetur sed tempora."}),I(P1,{}),I(H1,{})]}),W1=u1`
+`,B1=({isOpen:e,scale:t="1",correctionOpen:n="0",correctionClosed:r="0",style:o,horizontal:l})=>I("div",{style:{paddingLeft:`${e?`${r}rem`:`${n}rem`}`,transform:`scale(${t}) rotate(${l?270:0}deg)`,...o},children:be(j1,{children:[I(D1,{style:{rotate:`${e?"45deg ":"-45deg "}`,marginBottom:`${e?"0.75rem ":"0"}`,marginTop:`${e?"0 ":"0.75rem"}`}}),I(F1,{}),I(U1,{style:{rotate:`${e?"-45deg ":"45deg "}`,marginBottom:`${e?"0.75rem ":"0"}`,marginTop:`${e?"0 ":"0.75rem"}`}})]})}),H1=()=>{const[e,t]=_.exports.useState("2392 42-2544"),n=i=>{"clipboard"in navigator?navigator.clipboard.writeText(i):document.execCommand("copy",!0,i),t("Telefono copiado"),setTimeout(()=>{t("2392 42-2544")},[2e3])},{openMap:r,setOpenMap:o,viewPort:l}=_.exports.useContext(Vr);return be(L1,{children:[be(T1,{children:[I(ho,{children:be(wi,{onClick:()=>n(e),type:"button",children:[I(z1,{style:{filter:`${l?"drop-shadow(2px 2px black)":"drop-shadow(1px 1px black)"}`}}),I(mo,{style:{filter:`${l?"drop-shadow(2px 2px black)":"drop-shadow(1px 1px black)"}`},children:e})]})}),I(ho,{children:be(wi,{onClick:()=>window.open("https://www.instagram.com/farmacia.leiva/?hl=es-la"),type:"button",children:[I(R1,{style:{filter:`${l?"drop-shadow(2px 2px black)":"drop-shadow(1px 1px black)"}`}}),I(mo,{style:{marginLeft:`${l?"1rem":"0.5rem"}`,filter:`${l?"drop-shadow(2px 2px black)":"drop-shadow(1px 1px black)"}`},children:"@farmacia.leiva"})]})}),be(ho,{children:[I(p1,{style:{filter:`${l?"drop-shadow(2px 2px black)":"drop-shadow(1px 1px black)"}`}}),I(mo,{style:{filter:`${l?"drop-shadow(2px 2px black)":"drop-shadow(1px 1px black)"}`},children:"Simini 978"})]}),I(ho,{children:be(wi,{onClick:()=>o(!r),type:"button",children:[I(B1,{isOpen:r,correctionClosed:l?.7:.5,correctionOpen:.3,scale:l?2:1,horizontal:l,style:{filter:`${l?"drop-shadow(2px 2px black)":"drop-shadow(1px 1px black)"}`,marginTop:`${l?"1rem":"0"}`}}),I(mo,{style:{marginLeft:`${l?"1rem":"0.25rem"}`,filter:`${l?"drop-shadow(2px 2px black)":"drop-shadow(1px 1px black)"}`},children:r?"Ocultar Mapa ":"Ver Mapa "})]})})]}),I(O1,{style:{margin:`${r?l?"0.5rem":"0.125rem":"0"}`,width:`${r?l?"45vw":"90vw":"0"}`},children:I(M1,{openMap:r})})]})},V1=({})=>be(hp,{children:[I($1,{children:I(_1,{})}),I(N1,{children:"Acá va un texto descriptivo de quienes somos. Lorem ipsum dolor sit amet consectetur adipisicing elit. In eveniet animi consequuntur cum quis explicabo inventore, rerum repellendus nulla obcaecati impedit. Quaerat neque, aspernatur eum impedit necessitatibus tenetur sed tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. In eveniet animi consequuntur cum quis explicabo inventore, rerum repellendus nulla obcaecati impedit. Quaerat neque, aspernatur eum impedit necessitatibus tenetur sed tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. In eveniet animi consequuntur cum quis explicabo inventore, rerum repellendus nulla obcaecati impedit. Quaerat neque, aspernatur eum impedit necessitatibus tenetur sed tempora."}),I(P1,{}),I(H1,{})]}),W1=u1`
     body {
         margin: 0;
         padding: 0;
