@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Logo = styled.div`
-  color white;
+  color: white;
   font-size: 10rem;
   text-shadow: green 3px 3px;
   @media (max-width: 528px) {

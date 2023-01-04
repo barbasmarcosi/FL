@@ -8,14 +8,15 @@ export const IconContainer = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
-  background: lightgrey;
   border-radius: 0.25rem;
   margin-bottom: 0.25rem;
   border: 1px solid grey;
   padding: 0.25rem 0;
   box-shadow: 1px 1px 1px 0 black;
   background: transparent;
+  background-color: #96969629;
   color: white;
+  backdrop-filter: blur(10px);
   border-radius: 0.5rem;
   @media (max-width: 528px) {
     border-radius: 0.25rem;
@@ -31,7 +32,6 @@ export const IframeSplitter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //background: rgba(179, 179, 179, 1);
   background: transparent;
   opacity: 90%;
   width: 45vw;
@@ -51,13 +51,12 @@ export const IframeSplitter = styled.div`
 export const IconText = styled.span`
   margin-left: 0.25rem;
   font-weight: light;
-  text-shadow: black 2px 2px;
   @media (max-width: 528px) {
-    text-shadow: black 1px 1px;
   }
 `;
 
 export const ContactContainer = styled.div`
+  backdrop-filter: blur(10px);
   margin: 0.5rem;
   padding: 0.5rem;
   padding-top: 0.25rem;
@@ -97,7 +96,6 @@ export const MapButton = styled.button`
   color: white;
   height: 100%;
   font-weight: light;
-  text-shadow: black 3px 3px;
   background: transparent;
   padding: 0.25rem;
   font-size: 2.4rem;
@@ -108,6 +106,5 @@ export const MapButton = styled.button`
   @media (max-width: 528px) {
     border-radius: 0.25rem;
     font-size: 1.2rem;
-    text-shadow: black 1px 1px;
   }
 `;

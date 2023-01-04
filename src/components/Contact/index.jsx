@@ -31,10 +31,10 @@ const Contact = () => {
   return (
     <ContactContainer>
       <IframeSplitter>
-        <IconContainer>
+        <IconContainer >
           <MapButton onClick={() => copyTextToClipboard(coppied)} type="button">
-            <AiOutlinePhone style={{ filter: "drop-shadow(2px 2px black)" }} />
-            <IconText>{coppied}</IconText>
+            <AiOutlinePhone style={{ filter: `${viewPort ? "drop-shadow(2px 2px black)" : "drop-shadow(1px 1px black)"}` }} />
+            <IconText style={{ filter: `${viewPort ? "drop-shadow(2px 2px black)" : "drop-shadow(1px 1px black)"}` }}>{coppied}</IconText>
           </MapButton>
         </IconContainer>
         <IconContainer>
@@ -44,15 +44,15 @@ const Contact = () => {
             }
             type="button"
           >
-            <BsInstagram style={{ filter: "drop-shadow(2px 2px black)" }} />
-            <IconText style={{ marginLeft: `${viewPort ? "1rem" : "0.5rem"}` }}>
+            <BsInstagram style={{ filter: `${viewPort ? "drop-shadow(2px 2px black)" : "drop-shadow(1px 1px black)"}` }} />
+            <IconText style={{ marginLeft: `${viewPort ? "1rem" : "0.5rem"}`, filter: `${viewPort ? "drop-shadow(2px 2px black)" : "drop-shadow(1px 1px black)"}` }}>
               @farmacia.leiva
             </IconText>
           </MapButton>
         </IconContainer>
         <IconContainer>
-          <MdOutlinePlace style={{ filter: "drop-shadow(2px 2px black)" }} />
-          <IconText>Simini 978</IconText>
+          <MdOutlinePlace style={{ filter: `${viewPort ? "drop-shadow(2px 2px black)" : "drop-shadow(1px 1px black)"}` }} />
+          <IconText style={{ filter: `${viewPort ? "drop-shadow(2px 2px black)" : "drop-shadow(1px 1px black)"}` }}>Simini 978</IconText>
         </IconContainer>
         <IconContainer>
           <MapButton onClick={() => setOpenMap(!openMap)} type="button">
@@ -63,12 +63,12 @@ const Contact = () => {
               scale={viewPort ? 2 : 1}
               horizontal={viewPort}
               style={{
-                filter: "drop-shadow(2px 2px black)",
+                filter: `${viewPort ? "drop-shadow(2px 2px black)" : "drop-shadow(1px 1px black)"}`,
                 marginTop: `${viewPort ? "1rem" : "0"}`,
               }}
             />
             <IconText
-              style={{ marginLeft: `${viewPort ? "1rem" : "0.25rem"}` }}
+              style={{ marginLeft: `${viewPort ? "1rem" : "0.25rem"}`, filter: `${viewPort ? "drop-shadow(2px 2px black)" : "drop-shadow(1px 1px black)"}` }}
             >
               {openMap ? "Ocultar Mapa " : "Ver Mapa "}
             </IconText>
@@ -83,7 +83,7 @@ const Contact = () => {
       >
         <PlaceIframe openMap={openMap} />
       </IframeContainer>
-    </ContactContainer>
+    </ContactContainer >
   );
 };
 
